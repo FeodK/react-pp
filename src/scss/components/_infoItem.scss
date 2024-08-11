@@ -9,7 +9,9 @@
   align-items: center;
   justify-content: center;
 
-  transition: all 0.5s ease;
+  @media screen and (max-width: 800px) {
+    padding: 20px;
+  }
 
   &__block {
     position: relative;
@@ -19,6 +21,10 @@
     background: $color-white;
     border-radius: 10px;
     padding: 20px;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
   }
 
   &__close {
