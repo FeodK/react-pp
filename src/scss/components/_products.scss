@@ -1,0 +1,64 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.item {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+
+    &__img {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+
+    &__info {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__price {
+        color: $color-accent;
+    }
+
+    &__add {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background: $color-btn;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        color: $color-text-light;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: 800;
+        transition: all 0.5s ease;
+
+        &:hover {
+            background: $color-btn-hover;
+            transform: scale(1.2) translateY(-2px);
+        }
+    }
+}

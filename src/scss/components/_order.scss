@@ -1,0 +1,41 @@
+.order {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__img {
+        width: 70px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    &__title {
+        font-size: 20px;
+    }
+
+    &__price {
+        font-weight: 600;
+        color: #797979;
+    }
+
+    &__delete {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        cursor: pointer;
+        color : #797979;
+
+        transition: color, transform 0.2s ease;
+
+        &:hover {
+            color: #ce1c19;
+            transform: scale(1.2);
+        }
+    }
+}
